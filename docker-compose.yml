@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  kaggle:
+    image: kaggle/python
+    container_name: textanalytics
+    command: jupyter notebook --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working
+    working_dir: /tmp/working
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/tmp/working
+      - ./data:/tmp/working/data
