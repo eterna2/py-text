@@ -2,7 +2,7 @@ version: '2'
 
 services:
   kaggle:
-    image: kaggle/python
+    build: .
     container_name: textanalytics
     command: jupyter notebook --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working
     working_dir: /tmp/working
